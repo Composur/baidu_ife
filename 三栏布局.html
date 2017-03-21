@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三栏式布局</title>
+    <style>
+        *{
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+        }
+        #container{
+            width: auto;
+            border: 1px solid black;
+            overflow: auto;
+            zoom: 1;
+        }
+        #main{
+            width: auto;
+            max-height: 446px;
+            padding: 20px;
+            background: #eee;
+            border: 1px solid #999999;
+        }
+        #left{
+            width: 200px;
+            background: white;
+            text-align: right;
+            float: left;
+            /*position: absolute;*/
+        }
+        #team_logo,#right>div{
+            width: 80px;
+            height: 80px;
+            background: #DFDFDF;
+            text-align: center;
+            position: relative;
+            left: 20px;
+            bottom: 8px;
+
+        }
+        #team_logo1{
+            display:table-cell;
+            vertical-align:middle;
+            text-align:center;
+            width: 75px;
+            height: 75px;
+        }
+        #team_logo1>p{
+            margin: 0px;
+        }
+        #mid{
+            /*width: 500px;*/
+            border: 1px solid #999999;
+            padding: 20px;
+            /*position: relative;*/
+            /*float: left;*/
+            background: white;
+            /*position: relative;*/
+            /*margin: 0px -800px 0px 220px;*/
+            /*position: absolute;*/
+            margin-left: 25%;
+            margin-right: 20%;
+
+        }
+        #right{
+            float: right;
+            width: 120px;
+            height: auto;
+            background: white;
+            /*padding: 20px;*/
+            /*position: relative;*/
+            /*position: absolute;*/
+            border: 1px solid #999999;
+            /*top: -375px;*/
+            position: relative;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="main">
+            <div id="left">
+                <span>团队名称&nbsp;&nbsp;</span>
+                <div id="team_logo">
+                    <div id="team_logo1">
+                        <p>团队logo</p><span>80x80</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="right">
+                <div><p>团队logo</p><span>80x80</span></div>
+                <div><p>团队logo</p><span>80x80</span></div>
+                <div><p>团队logo</p><span>80x80</span></div>
+                <div><p>团队logo</p><span>80x80</span></div>
+            </div>
+
+
+            <div id="mid">
+                <p>关于你们团队的介绍</p>
+                <p>一切使人团结的是善与美，一切使人分裂的是恶与丑。列夫托尔斯泰</p>
+                <p>(一下为示例)</p>
+                <p>团队合作更有利于提高决策效率。团队与一般的群体不同，团队的人数相对比较少，这有利于减少信息在传递过程中的缺失，有利于团队成员之间的交流沟通，有利于提高成员参与团队的决策的积极性。同时领导的概念在团队之间相对不强，团队成员之间相对扁平，这有利于形成决策民主化。</p>
+                <p>2016春季班概述</p>
+                <p>由于团队成员之间的高度互赖及利益共享，每位成员都面临着是否合作的困境：如果自己不合作，而其他成员皆努力付出，那就能坐享团队的成果；但如果所有团队成员都作此想，那该团队将一事无成，结果每个人都受到惩罚。从另一方面说，如果自己全心投入，而其他成员皆心不在焉、懒散懈怠，那么到时由于自己的努力为团队取得的成果就会被其他成员所瓜分。
+                    由于团队成员之间的高度互赖及利益共享，每位成员都面临着是否合作的困境：如果自己不合作，而其他成员皆努力付出，那就能坐享团队的成果；但如果所有团队成员都作此想，那该团队将一事无成，结果每个人都受到惩罚。从另一方面说，如果自己全心投入，而其他成员皆心不在焉、懒散懈怠，那么到时由于自己的努力为团队取得的成果就会被其他成员所瓜分。
+                </p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
