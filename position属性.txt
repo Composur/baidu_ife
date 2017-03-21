@@ -2,3 +2,4 @@
 2.2.absolute 在子div，它的父div必须有个position属性不是默认static的。这样它就可以以父类为参照进行定位
 3.absolute 生成绝对定位的元素，相对于 static 定位以外的第一个祖先元素进行定位。 
 4.relative 生成相对定位的元素，相对于其在普通流中的位置进行定位。
+5.
