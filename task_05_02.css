@@ -140,6 +140,7 @@ img{
 }
 .pic{
     float: left;
+<<<<<<< HEAD
 }
 footer{
     width: 100%;
@@ -150,4 +151,6 @@ footer>p{
     color: white;
     text-align: center;
     line-height: 40px;
+=======
+>>>>>>> 9047ab13a9cc2cd7dc9ecded12ce4e36f66033d0
 }
