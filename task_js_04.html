@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    li{
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background: red;
+        margin: 20px;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+    }
+</style>
+<body>
+    <input type="text" id="num">
+    <button>左侧入</button>
+    <button>右侧入</button>
+    <button>左侧出</button>
+    <button>右侧出</button>
+
+    <div id="div_wrap">
+
+
+    </div>
+<script>
+    var oNum=document.getElementById("num");
+    var aBtn=document.getElementsByTagName("button");
+    var oDiv=document.getElementById("div_wrap");
+    var oli=document.getElementsByTagName("li");
+    aBtn[0].onclick=function () {
+//        console.log(typeof oNum.value);
+//        if ( oNum.value.length == 0 || isNaN(oNum.value)){
+//               alert("请输入一个数字");
+//        }else {
+//            if(10>oNum.value || 100<oNum.value){
+//                alert("请输入一个10——100的数字");
+//            }else{
+//                var oDiv_1=document.createElement("li");
+//                oDiv_1.innerHTML=oNum.value;
+//                console.log(oDiv_1);
+//                oDiv.insertBefore(oDiv_1,oDiv.children[0]);
+//                oNum.value=null;
+//            }
+//        }
+//
+        if(oNum.value.length==0||isNaN(oNum.value)){
+            alert("请输出一个数字");
+        }else{
+            var oDiv_1=document.createElement("li");
+            oDiv_1.innerHTML=oNum.value;
+            oDiv.insertBefore(oDiv_1,oDiv.children[0]);
+            oNum.value=null;
+        }
+    };
+    aBtn[1].onclick=function () {
+        if (isNaN(oNum.value)||oNum.value.length==0){
+            alert("请输入一个数字");
+        }else {
+            var oDiv_2=document.createElement("li");
+            oDiv_2.innerHTML=oNum.value;
+            oDiv.appendChild(oDiv_2);
+            oNum.value=null;
+        }
+    };
+    aBtn[2].onclick=function () {
+            if (oDiv.hasChildNodes()){
+                alert(oDiv.children[0].innerHTML);
+                oDiv.removeChild(oDiv.children[0]);
+            }else {
+              alert("队列为空请添加元素");
+                return false;
+            }
+
+        };
+
+        aBtn[3].onclick=function () {
+            if (oDiv.hasChildNodes())
+            {
+                var oLi_len=oli.length;
+                alert(oli[oLi_len-1].innerHTML);
+                oli[oLi_len-1].remove();
+//                alert(oDiv.children[oLi_len-1].innerHTML);
+//                oDiv.removeChild(oDiv.children[oLi_len-1]);
+            } else {
+//                alert("队列为空请添加元素");
+                return false;
+            }
+        };
+</script>
+</body>
+</html>
